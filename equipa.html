@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Conheça a equipa da RARCenter - Os três principais fundadores e chefes da loja.">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="RARCenter - Equipa">
+    <title>Equipa - RARCenter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .team-section {
+            padding: 6rem 0;
+            background-color: var(--bg-light);
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .team-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .team-header p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-weight: 700;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .member-name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            font-size: 1.125rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .member-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .member-expertise {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .expertise-tag {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .team-section {
+                padding: 4rem 0;
+            }
+
+            .team-header h1 {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .member-photo {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="logo">
+                        <a href="trabalho.html" style="text-decoration: none; color: inherit;">
+                            <h1>RAR<span>Center</span></h1>
+                        </a>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="trabalho.html#inicio" class="nav-link">Início</a></li>
+                        <li><a href="trabalho.html#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="trabalho.html#orcamento" class="nav-link">Orçamento</a></li>
+                        <li><a href="trabalho.html#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="trabalho.html#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- Team Section -->
+    <section class="team-section" style="padding-top: 100px;">
+        <div class="container">
+            <div class="team-header">
+                <h1>A Nossa Equipa</h1>
+                <p>Conheça os três principais fundadores e chefes da RARCenter, profissionais dedicados com anos de experiência no setor de reparação e assistência técnica.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Fundador 1 -->
+                <div class="team-member">
+                    <div class="member-photo">AR</div>
+                    <h2 class="member-name">Afonso Ramalho</h2>
+                    <p class="member-role">Fundador & CEO</p>
+                    <p class="member-description">
+                        Afonso é o visionário por trás da RARCenter. Com mais de 15 anos de experiência em reparação de equipamentos eletrónicos, fundou a empresa com a missão de fornecer serviços de qualidade a preços acessíveis. Especialista em reparação de computadores e gestão de negócios.
+                    </p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Gestão</span>
+                        <span class="expertise-tag">Computadores</span>
+                        <span class="expertise-tag">Liderança</span>
+                    </div>
+                </div>
+
+                <!-- Fundador 2 -->
+                <div class="team-member">
+                    <div class="member-photo">RO</div>
+                    <h2 class="member-name">Rodrigo Oliveira</h2>
+                    <p class="member-role">Co-Fundador & Diretor Técnico</p>
+                    <p class="member-description">
+                        Rodrigo é o especialista técnico da equipa. Com formação em Engenharia Informática e certificações em várias marcas, lidera a equipa de técnicos e garante que todas as reparações são realizadas com os mais altos padrões de qualidade. Especialista em telemóveis e tablets.
+                    </p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Telemóveis</span>
+                        <span class="expertise-tag">Tablets</span>
+                        <span class="expertise-tag">Hardware</span>
+                    </div>
+                </div>
+
+                <!-- Fundador 3 -->
+                <div class="team-member">
+                    <div class="member-photo">RC</div>
+                    <h2 class="member-name">Rodrigo Correia</h2>
+                    <p class="member-role">Co-Fundador & Diretor de Operações</p>
+                    <p class="member-description">
+                        Rodrigo é responsável pelas operações diárias da loja e pelo atendimento ao cliente. Com uma paixão pelo serviço ao cliente e anos de experiência no setor, garante que cada cliente recebe atenção personalizada e soluções adequadas às suas necessidades.
+                    </p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Atendimento</span>
+                        <span class="expertise-tag">Operações</span>
+                        <span class="expertise-tag">Logística</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-button">
+                <a href="trabalho.html#sobre" class="btn btn-primary">Voltar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RARCenter</h3>
+                    <p>O seu centro de reparação e assistência técnica de confiança.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="trabalho.html#inicio">Início</a></li>
+                        <li><a href="trabalho.html#servicos">Serviços</a></li>
+                        <li><a href="trabalho.html#orcamento">Orçamento</a></li>
+                        <li><a href="trabalho.html#sobre">Sobre</a></li>
+                        <li><a href="trabalho.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>+351 21 123 4567</p>
+                    <p>rarcenter@outlook.pt</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="facebook.html" aria-label="Facebook">Facebook</a>
+                        <a href="instagram.html" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RARCenter. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
